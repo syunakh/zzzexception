@@ -21,6 +21,12 @@ namespace zzzexception
                     {
                         Text = "Success"
                     });
+
+                var a = context.Tests.Where(x => ids.Contains(x.TestId)).Future();
+                
+                var b = context.Tests.Where(x => ids.Contains(x.TestId)).Future();
+
+                var c = b.ToList();
             }
         }
     }
